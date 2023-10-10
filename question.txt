@@ -1,0 +1,75 @@
+ Investment Theory
+
+1 The tangible benefits of rebalancing
+The point of this exercise is to quantify the benefits of rebalancing. Suppose that you are
+investing in two stock market indices, AAA and ZZZ. Both risky assets have returns that are
+normally distributed, with the same mean return (10%) and the same standard deviation
+(20%). Further, the correlation between the two risky returns is zero. Also, assume the
+risk-free rate is zero.
+1. What is the optimal (i.e. mean-variance efficient) allocation among the two securities?
+2. Now, we will examine the performance of two strategies over an investment horizon of
+100 years. We will do so across many simulations (say 10,000 though you can choose
+any number you want). For each simulation,
+(a) Simulate a vector of returns for the two risky assets, AAA and ZZZ. Use your
+software’s build in random number generator.
+For example, in Matlab, you can simulate a normal variable with mean μ and
+standard deviation σ via x = μ + σ × randn, where randn simulates a standard
+N (0, 1) variable.
+(b) Compute the returns to your initial wealth of the buy and hold strategy—that is,
+the strategy in which you allocated optimally at t = 0 and then did not rebalance.
+(c) Compute the returns to your initial wealth of the rebalanced strategy—that is,
+the strategy in which you rebalanced at the end of every year to the ‘optimal’
+portfolio weights.
+1
+(d) Compute the realized Sharpe ratio for each of the two strategies above. In addi-
+tion, compute the average allocation to the first risky asset AAA in the buy and
+hold strategy (in the rebalancing strategy it should be constant by construction).
+3. Plot a histogram of the realized Sharpe ratio across simulations of the two strategies.
+What is the average Sharpe ratio of each strategy? Also plot the mean portfolio weight
+to asset 1 of the buy and hold strategy. Discuss your findings.
+For the purposes of this exercise, it will be best to use a programming language like
+MATLAB, Octave, or R. It is possible to do it in Excel, though it will be rather painful.
+To get you started in Matlab, we have posted some sample code for simulating returns in
+GettingStartedhw4p1.m.
+2 Human Capital
+Let us revisit the portfolio problem in Topic 2 (and in the problem above), but now let us
+take into account your human capital. As before, you can invest your wealth into either the
+riskless asset (1% per year) or in three stock market indices with the following characteristics:
+Asset E(r) σ
+US 8.0% 19%
+Japan 3.7% 25%
+Mexico 6.0% 15%
+Correlations
+Assets US J M
+US 1.0 0.5 0.8
+J 0.5 1.0 0.2
+M 0.8 0.2 1.0
+Now, let us add a fifth asset, your human capital. Assume that human capital accounts
+for 50% of your total wealth. This is an asset that you are endowed with, but that you cannot
+rebalance (you cannot buy more human capital and you cannot sell your human capital).
+(i) First assume that your human capital is riskless. Solve your portfolio choice problem
+assuming you are a mean variance investor with γ = 4. That is, what are the optimal
+weights (of financial wealth) in each stock market index and the riskless asset.
+(ii) Redo part (i) assuming that your human capital is only 20% of your total wealth.
+2
+(iii) Now assume that human capital is risky. To keep things simple (at first), assume that
+your human capital has the same return as the US stock market.
+(a) If human capital is 20% of your wealth, can you achieve the same Sharpe ratio as
+in part (ii). If so, how? If not, why not?
+(b) If human capital is 50% of your wealth, can you achieve the same Sharpe ratio as
+in part (i). If so, how? If not, why not?
+(iv) Optional “Challenge” Question: you are not required to answer this question to get full
+credit on the problem set. But, it might be fun to try :) A more realistic assumption
+is that your human capital is only positively correlated with the US stock market.
+Suppose that the mean return to your human wealth is 9% per year, with a standard
+deviation of 25%. The correlation of your human capital returns with the return on
+US, Japan, and Mexico stock market indices is 0.3, 0.1, and 0.1, respectively. Assume
+that human capital accounts for 50% of your total wealth. Solve the portfolio choice
+problem assuming you are a mean-variance investor with γ = 4. That is, what are the
+optimal weights (of financial wealth) in each stock market index and the riskless asset.
+(Hint: Use the Alternative Approach on Slide 47 of the MPT Lecture Notes. You will
+be optimizing over the weights in US, Japan and Mexico having fixed the weight in
+human capital at 0.5. Write down the first-order conditions for each of the three risky
+asset weights. This is a system with three linear equations and three unknowns. Solve
+this system and use the solution answer the question.)
+3
